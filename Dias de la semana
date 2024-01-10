@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+int main()
+{
+    int numero = 0;
+    
+    while(numero != 8){
+    printf("Escribe un numero del 1 al 7, para salir presiona 8 \n");
+    scanf("%d",&numero);
+    switch(numero){
+        case 1:
+            printf("Lunes = 1\n");
+        break;
+        case 2:
+            printf("Martes = 2\n");
+        break;
+         case 3:
+            printf("Miercoles = 3\n");
+        break;
+         case 4:
+            printf("Jueves = 4\n");
+        break;
+         case 5:
+            printf("Viernes = 5\n");
+        break;
+         case 6:
+            printf("Sabado = \n");
+        break;
+         case 7:
+            printf("Domingo = 7\n");
+        break;
+        case 8:
+            printf("FIN");
+        break;
+        default:
+            printf("Error, intentalo de nuevo\n");
+        break;
+        }
+    }
+
+    return 0;
+}
+

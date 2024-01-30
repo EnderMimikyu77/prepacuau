@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main(){
+    char opcion1;
+    int numero1;
+    int suma;
+    int numero2;
+    int numero3;
+    int numero4;
+    int multiplicacion;
+    cout <<"selecciona una opcion\n";
+    cout<<"a)Realizar una suma\n";
+    cout<<"b)Realizar una multiplicacion\n";
+    cin>>opcion1;
+    if(opcion1 == 'a'){
+        cout<<"Elegiste una suma\n";
+        cout<<"Escribe un numero\n";
+        cin>>numero1;
+        cout<<"Escribe otro numero \n";
+        cin>>numero2;
+        suma=numero1+numero2;
+        cout<<"El resultado es "<<suma;
+    }
+    else{
+        cout<<"Elegiste una multiplicacion\n";
+        cout<<"Escribe un numero\n";
+        cin>>numero3;
+        cout<<"Escribe otro numero\n";
+        cin>>numero4;
+        multiplicacion=numero3*numero4;
+        cout<<"El resultado es "<<multiplicacion;
+    
+        
+    }return 0;
+}

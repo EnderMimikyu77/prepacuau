@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    string nombrecompleto, contraseña, usuario;
+    cout<<"Escribe tu nombre completo \n";
+    getline(cin,nombrecompleto);
+    cout<<"Ingresa tu nombre de usuario \n";
+    cin>>usuario;
+    cout<<"Inicio de sesion \n";
+    cout<<"Usuario: \n"<<usuario;
+    cout<<"\nIngresa la contraseña :";
+    cin>>contraseña;
+    if(contraseña == "1234"){
+        cout<<"Contraseña correcta\n";
+        cout<<"Bienvenido "<<usuario;
+    }else{
+        cout<<"Contraseña incorrecta \n";
+        cout<<"Intentalo de nuevo";
+    }
+}

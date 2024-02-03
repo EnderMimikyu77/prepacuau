@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string usuario = "";
+string aux = "";
+int main() {
+    bool i = true;
+    int opcion;
+    while (i == true) {
+        cout<< "\nMenu\n";
+        cout<< "1.- Crear usuario\n";
+        cout<< "2.- Ver usuarios\n";
+        cout<< "3.- Salir\n"; 
+        cin>> opcion;
+        if (opcion == 1){
+            cout<<"Creando usuario\n";
+            cout<<"Captura usuario: ";
+            aux = usuario;
+            cin>>usuario;
+            usuario = usuario + " | " + aux;
+        }
+        if (opcion == 2){
+            cout<<"Ver usuarios\n";
+            cout<<"Usuarios: \n"<<usuario;
+        }
+        if (opcion == 3) {
+            cout<<"Saliendo";
+            i = false;
+        }
+    }
+
+    return 0;
+}

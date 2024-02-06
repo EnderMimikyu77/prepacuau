@@ -1,0 +1,83 @@
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main(){
+    int opcion;
+    float numero1;
+    float numero2;
+    float suma;
+    float resta;
+    float multiplicacion;
+    float division;
+    bool i = true;
+    
+    while(i == true){
+        cout<<"\nMenu\n";
+        cout<<"Que operacion quieres hacer \n";
+        cout<<"1.- Suma \n";
+        cout<<"2.- Resta \n";
+        cout<<"3.- Multiplicacion \n";
+        cout<<"4.- Division \n";
+        cout<<"5.- Terminar \n";
+        cin>>opcion;
+        switch(opcion){
+            case 1:
+            system("clear");
+            cout<<"Has elegido una suma \n";
+            cout<<"Elige un numero \n";
+            cin>>numero1;
+            cout<<"Elige otro numero \n";
+            cin>>numero2;
+            suma = numero1 + numero2;
+            cout<<"El resultado de la suma es: "<<suma;
+            break;
+        
+            case 2:
+            system("clear");
+            cout<<"Has elegido una resta \n";
+            cout<<"Elige un numero \n";
+            cin>>numero1;
+            cout<<"Elige otro numero \n";
+            cin>>numero2;
+            resta = numero1 - numero2;
+            cout<<"El resultado de la resta es: "<<resta;
+            break;
+        
+            case 3:
+            system("clear");
+            cout<<"Has elegido una multiplicacion \n";
+            cout<<"Elige un numero \n";
+            cin>>numero1;
+            cout<<"Elige otro numero \n";
+            cin>>numero2;
+            multiplicacion = numero1 * numero2;
+            cout<<"El resultado de la multiplicacion es: "<<multiplicacion;
+            break;
+        
+            case 4:
+            system("clear");
+            cout<<"Has elegido una division \n";
+            cout<<"Elige un numero \n";
+            cin>>numero1;
+            cout<<"Elige otro numero \n";
+            cin>>numero2;
+            division = numero1 / numero2;
+            cout<<"El resultado de la division es: "<<division;
+            break;
+            
+            case 5:
+            i = false;
+            break;
+        
+            default:
+            cout<<"Tas menso, esa no es una opcion, lee bien \n";
+            break;
+            
+            i = false;
+        }
+        
+    }
+    return 0;
+    
+}

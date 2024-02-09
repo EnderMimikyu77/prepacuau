@@ -1,0 +1,68 @@
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+int main(){
+    
+    int opcion;
+    float base;
+    float altura;
+    float multiplicacion;
+    float radio;
+    bool i = true;
+    
+    while(i == true){
+    cout<<"\nQue area quieres sacar\n";
+    cout<<"Menu\n";
+    cout<<"1.- Area de un triangulo\n";
+    cout<<"2.- Area de un cuadrado\n";
+    cout<<"3.- Area de un circulo\n";
+    cout<<"4.- Terminar\n";
+    cin>>opcion;
+    switch(opcion){
+            case 1:
+            system("clear");
+            cout<<"Has elegido sacar el area de un triangulo\n";
+            cout<<"Cual es la base\n";
+            cin>>base;
+            cout<<"Cual es la altura\n";
+            cin>>altura;
+            multiplicacion=base*altura/2;
+            cout<<"El area del triangulo es: \n"<<multiplicacion;
+            break;
+        
+            case 2:
+            cout<<"Has elegido sacar el area de un cuadrado\n";
+            cout<<"Cuel es la base\n";
+            cin>>base;
+            cout<<"Cual es la altura\n";
+            cin>>altura;
+            multiplicacion=base*altura;
+            cout<<"El area del cuadrado es: "<<multiplicacion;
+            break;
+        
+            case 3:
+            cout<<"Has elegido sacar el area de un circulo\n";
+            cout<<"Escribe el radio del circulo\n";
+            cin>>radio;
+            multiplicacion=radio*3.1416;
+            cout<<"El area de un circulo es: "<<multiplicacion;
+            break;
+            
+            case 4:
+            i = false;
+            break;
+        
+            default:
+            cout<<"Tas menso\n";
+            cout<<"Esa no es una opcion\n";
+            cout<<"Lee bien las opciones del menu\n";
+            break;
+            
+            i = false;
+        }
+    }
+    
+    
+    return 0;
+}

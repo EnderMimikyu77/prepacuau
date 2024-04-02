@@ -1,0 +1,250 @@
+#include <iomanip>
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main(){
+    
+    int opcion1;    //Declarcion de variables 
+    char opcion2;
+    char opcion3;
+    char opcion4;
+    bool i = true;
+    bool a = true;
+    bool z = true;
+    bool x = true;
+    
+    
+    while(i == true){
+        
+        cout<<"\nMenu \n";      //Menu principal
+        cout<<"Elige un tema \n";
+        cout<<"1. Pilas \n";
+        cout<<"2. Colas \n";
+        cout<<"3. Filas \n";
+        cout<<"4. Terminar \n";
+        cin>>opcion1;
+    
+        switch(opcion1){
+        
+            while(a == true){
+                
+                case 1:
+                cout<<"\nPilas \n";     //Manu para pilas 
+                cout<<"Que quieres saber \n";
+                cout<<"a) Que son\n";
+                cout<<"b) Ejemplos\n";
+                cout<<"c) Operaciones\n";
+                cout<<"d) Regresar al menu principal \n";
+                cin>>opcion2;
+        
+                switch(opcion2){
+                    case 'a':
+                    system("clear");
+                    cout<<"\nQue son \n";
+                    
+                    cout<<"Las pilas son una estructura de datos que sigue el\nprincipio de LIFO (Last In, First Out), lo que significa que el último elemento\nque se inserta en la pila es el primero en ser eliminado.\nFunciona de manera similar a una pila de objetos físicos:\npuedes apilar elementos unos sobre otros y solo puedes quitar\nel elemento superior. \n";
+                    break;
+            
+                    case 'b':
+                    system("clear");
+                    cout<<"\nEjemplos\n";
+                    
+                    cout<<"1.- Evaluación de expresiones aritméticas: \n";
+                    cout<<"\nAl evaluar una expresión aritmética, puedes usar una pila para\nmantener un seguimiento de los operandos y operadores.\nPor ejemplo, al evaluar la expresión 3 + 4 * 2, podrías usar una pila\npara calcular correctamente el resultado.\n";
+                    
+                    cout<<"\n2.- Reversión de cadenas: \n";
+                    cout<<"\nPara revertir una cadena de caracteres, puedes utilizar una pila.\nAlmacena cada carácter en la pila y luego pop los caracteres\npara reconstruir la cadena en orden inverso.";
+                    
+                    cout<<"\n3.- Validación de paréntesis: \n";
+                    cout<<"\nLas pilas son útiles para validar la correcta colocación de paréntesis, corchetes y llaves\nen una expresión.\nPuedes usar una pila para rastrear la apertura y el cierre \ndecuados de estos caracteres.\n";
+                    break;
+            
+                    case 'c':
+                    system("clear");
+                    cout<<"\nOperaciones\n";
+                    
+                    cout<<"\nLas operaciones que se pueden hacer con pilas son: \n";
+                    
+                    cout<<"1.- Push (Empujar):\n";
+                    cout<<"Agrega un elemento a la parte superior de la pila.\nSi la pila está llena, es posible que se produzca un desbordamiento de pila.\n";
+                    
+                    cout<<"2.- Pop (Sacar):\n";
+                    cout<<"Elimina y devuelve el elemento superior de la pila.\nSi la pila está vacía, puede ocurrir un error de subdesbordamiento.";
+                    
+                    cout<<"3.- Peek (Mirar):\n";
+                    cout<<"Permite ver el elemento superior de la pila sin eliminarlo.\nEs útil para inspeccionar el elemento que está próximo a ser eliminado. \n";
+                    
+                    cout<<"4.- isEmpty (Está vacía):\n";
+                    cout<<"Comprueba si la pila está vacía.\nDevuelve verdadero si la pila no contiene ningún elemento y falso en caso contrario. \n";
+                    break;
+                    
+                    case 'd':
+                    
+                    a = false;
+                    
+                    break;
+                    
+                    default:
+                    
+                    cout<<"Elige de nuevo una opcion que este en el menu \n";
+                    
+                    break;
+                
+                }
+                
+            }
+            
+            break;
+            
+            while(z == true){
+                case 2:
+                cout<<"\nColas\n";      //Menu para colas 
+                cout<<"Que quieres saber \n"; 
+                cout<<"a) Que son \n";
+                cout<<"b) Ejemplos \n";
+                cout<<"c) Operaciones \n";
+                cout<<"d) Regresar al menu principal \n";
+                cin>>opcion3;
+            
+                switch(opcion3){
+                    case 'a':
+                    system("clear");
+                    cout<<"\nQue son\n";
+                    
+                    cout<<"Una cola es una colección de elementos que se mantiene\nen el orden en que se añadieron, y que permite\nacceso a sus elementos de acuerdo con el principio FIFO (First In, First Out)\nes decir, el primer elemento que se añade es el\nprimero en ser eliminado.";
+                    break;
+                    
+                    case 'b':
+                    system("clear");
+                    cout<<"\nEjemplos\n";
+                    
+                    cout<<"1.- Cola de impresión\n";
+                    cout<<"En un sistema de impresión, las solicitudes de impresión se pueden encolar en una cola.\nEl primer trabajo en ser encolado es el primero en ser procesado por la impresora. \n";
+                    
+                    cout<<"\n2.- Gestión de tareas en un sistema operativo\n";
+                    cout<<"En un sistema operativo, las tareas pueden ponerse en cola para su ejecución.\nPor ejemplo, los procesos pueden encolarse en una cola de planificación\nde procesos, donde el sistema operativo selecciona el próximo proceso\na ejecutar basándose en la política de planificación y el orden\nde llegada a la cola. \n";
+                    
+                    cout<<"\n3.- Búsqueda en amplitud (BFS) en grafos\n";
+                    cout<<"En algoritmos de búsqueda en grafos, como el BFS, se utiliza\nuna cola para mantener un seguimiento de los nodos que se deben visitar.\nLos nodos vecinos se encolan y luego se procesan en orden de llegada. \n";
+                    break;
+                    
+                    case 'c':
+                    system("clear");
+                    cout<<"\nOperaciones\n";
+                    
+                    cout<<"1.- Enqueue (Encolar): \n";
+                    cout<<"Agrega un elemento al final de la cola.\nEste elemento se coloca al final de la línea de espera y espera su turno para ser procesado. \n";
+                    
+                    cout<<"2.- Dequeue (Desencolar): \n";
+                    cout<<"Elimina y devuelve el elemento al principio de la cola.\nEste elemento es el primero en ser añadido a la cola\ny, por lo tanto, es el siguiente en ser procesado. \n";
+                    
+                    cout<<"3.- Peek (Mirar): \n";
+                    cout<<"Permite mirar el elemento al principio de la cola sin eliminarlo.\nEs útil para inspeccionar el próximo elemento que se va a desencolar\nsin modificar la estructura de datos. \n";
+                    
+                    cout<<"4.- isEmpty (Está vacía): \n";
+                    cout<<"Comprueba si la cola está vacía.\nDevuelve verdadero si la cola no contiene ningún elemento y falso en caso contrario. \n";
+                    break;
+                    
+                    case 'd':
+                    
+                    z = false;
+                    
+                    break;
+                    
+                    default:
+                    
+                    cout<<"Elige de nuevo una opcion que este en el menu \n";
+                    
+                    break;
+                }
+                
+            }
+            
+            break;
+            
+            while(x == true){
+                case 3:
+                cout<<"\nFilas \n";     //Menu para filas 
+                cout<<"Que quieres saber \n"; 
+                cout<<"a) Que son \n";
+                cout<<"b) Ejemplos \n";
+                cout<<"c) Operaciones \n";
+                cout<<"d) Regresar al menu principal \n";
+                cin>>opcion4;
+                
+                switch(opcion4){
+                    
+                    case 'a':
+                    system("clear");
+                    cout<<"\nQue son\n";
+                    
+                    cout<<"Son una estructura de datos que sigue el principio FIFO (First In, First Out),\nlo que significa que el primer elemento que se añade es el primero en ser eliminado.\nLas filas son similares a las colas, de hecho, el término\nfila se utiliza a menudo de manera intercambiable con cola\npara referirse a esta estructura de datos. \n";
+                    break;
+                    
+                    case 'b':
+                    system("clear");
+                    cout<<"\nEjemplos\n";
+                    
+                    cout<<"1.- Simulación de una cola de impresión: \n";
+                    cout<<"En un sistema de impresión, las tareas de impresión se pueden encolar en una fila.\nEl primer trabajo en ser encolado es el primero en ser\nprocesado por la impresora. \n";
+                    
+                    cout<<"\n2.- Búsqueda en amplitud (BFS) en grafos: \n";
+                    cout<<"En algoritmos de búsqueda en grafos, como el BFS, se\nutiliza una fila para mantener un seguimiento de los nodos\nque se deben visitar.\nLos nodos vecinos se encolan y luego se procesan en orden de llegada. \n";
+                    
+                    cout<<"\n3.- Simulación de una fila en un banco: \n";
+                    cout<<"Puedes simular el comportamiento de una fila en un banco o cualquier\nservicio al cliente donde las personas esperan su turno\npara ser atendidas. \n";
+                    break;
+                    
+                    case 'c':
+                    system("clear");
+                    cout<<"\nOperaciones\n";
+                    
+                    cout<<"1.- Enqueue (Encolar): \n";
+                    cout<<"Agrega un elemento al final de la fila.\nEste elemento se coloca al final de la línea de espera y espera\nsu turno para ser procesado. \n";
+                    
+                    cout<<"2.- Dequeue (Desencolar): \n";
+                    cout<<"Elimina y devuelve el elemento al principio de la fila.\nEste elemento es el primero en ser añadido\na la fila y, por lo tanto, es el siguiente en ser procesado. \n";
+                    
+                    cout<<"3.- Peek (Mirar): \n";
+                    cout<<"Permite mirar el elemento al principio de la fila sin eliminarlo.\nEs útil para inspeccionar el próximo elemento que se va a\ndesencolar sin modificar la estructura de datos. \n";
+                    
+                    cout<<"4.- isEmpty (Está vacía): \n";
+                    cout<<"Comprueba si la fila está vacía.\nDevuelve verdadero si la fila no contiene ningún\nelemento y falso en caso contrario. \n";
+                    break;
+                    
+                    case 'd':
+                    
+                    x = false;
+                    
+                    break;
+                    
+                    default:
+                    
+                    cout<<"Elige de nuevo una opcion que este en el menu \n";
+                    
+                    break;
+                }
+                
+            }
+            break;
+            
+            case 4:
+            
+            i = false;
+            
+            break;
+            
+            default:
+            
+            cout<<"Esa no es una opcion \n";
+            cout<<"Lee bien las opciones \n";
+            
+            break;
+        }
+        
+    }
+    
+    return 0;
+}

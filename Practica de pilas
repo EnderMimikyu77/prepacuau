@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int main(){
+    
+    stack<int>pila;
+    int num = 1;
+    
+    cout<<"Dame un numero y escribe 0 para salir: \n";
+    while(num != 0){
+        cin>>num;
+        if(num != 0){
+            pila.push(num);
+        }
+        
+    }
+    cout<<"Tamaño de la pila: \n"<<pila.size()<<endl;
+    cout<<"Tope de la pila: \n"<<pila.top()<<endl;
+    cout<<"Imprimiendo pila: \n";
+    while (!pila.empty()) {
+            cout << pila.top() << " \n";
+            pila.pop();
+    }
+
+    return 0;
+}

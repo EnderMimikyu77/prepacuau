@@ -1,0 +1,57 @@
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+int main(){
+    
+    queue<int>cola;
+    queue<int>cola2;
+    queue<int>cola3;
+    int lista1;
+    int lista2;
+    int num;
+    int num2;
+
+    cout<<"De qué tamaño va a ser la 1er lista: \n";
+    cin>>lista1;
+
+    for(int i = 0; i < lista1; i++) {
+        cout<<"Escribe un numero: \n";
+        cin>>num;
+
+        cola.push(num);
+    }
+    cout<<"El tamaño de la lista 1 es: \n"<<cola.size()<<endl;
+
+    cout<<"De qué tamaño va a ser la 2da lista: \n";
+    cin>>lista2;
+
+    for(int i = 0; i < lista2; i++){
+        cout<<"Escribe un numero: \n";
+        cin>>num2;
+
+        cola2.push(num2);
+    }
+    cout<<"El tamaño de la lista 2 es: \n"<<cola2.size()<<endl;
+
+    while(!cola.empty() || !cola2.empty()){
+        if(!cola.empty()){
+            cola3.push(cola.front());
+            cola.pop();
+        }
+        if(!cola2.empty()){
+            cola3.push(cola2.front());
+            cola2.pop();
+        }
+    }
+
+    cout<<"Elementos intercalados: \n";
+    while(!cola3.empty()){
+        cout<<cola3.front()<<" ";
+        cola3.pop();
+    }
+    cout<<endl;
+
+    return 0;
+}
